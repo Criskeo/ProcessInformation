@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
 		// 显示
 		tvTotalMem.setText(totalMemStr);
 		// 获得可用内存信息
-		String availMemStr = getSystemAvaialbeMemorySize();
+ 可用的和全部的		String availMemStr = getSystemAvaialbeMemorySize();
 		Log.i(TAG, "The Availabel Memory Size is" + availMemStr);
 		// 显示
 		tvAvailMem.setText(availMemStr);
