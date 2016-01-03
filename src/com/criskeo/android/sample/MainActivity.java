@@ -36,24 +36,20 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(MainActivity.this,
-						ProcessInfoActivity.class);
+				Intent intent = new Intent(MainActivity.this, ProcessInfoActivity.class);
 				startActivity(intent);
 			}
 		});
 
 		// 获得ActivityManager服务的对象
 		mActivityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-
 		// 获取全部内存信息
 		String totalMemStr = getSystemTotalMemorySize();
 		Log.i(TAG, "The Totall Memory Size is" + totalMemStr);
-		// 显示
 		tvTotalMem.setText(totalMemStr);
 		// 获得可用内存信息
- 可用的和全部的		String availMemStr = getSystemAvaialbeMemorySize();
+		String availMemStr = getSystemAvaialbeMemorySize();
 		Log.i(TAG, "The Availabel Memory Size is" + availMemStr);
-		// 显示
 		tvAvailMem.setText(availMemStr);
 	}
 
